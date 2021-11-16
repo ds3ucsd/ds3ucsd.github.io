@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.6;
+  margin: 0;
+  background: linear-gradient(180deg, #000000 0%, #5E5E5E 100%);
+  min-height: 100vh;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1, h2, h3, a {
+  color: white;
+}
+h1 {
+  font-weight: 600;
+  font-family: 'Saira', sans-serif;
+}
+h3 {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 1.4em;
+}
+#tracks p {
+  text-align: justify;
+}
+#faq p {
+  font-size: 1.5em;
+  
+  /* padding-top: 7px; */
+}
+
+.accordion-button{
+  font-weight:700;
+}
+.logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+.main-nav {
+  margin-top: 5px;
+}
+.logo a, .main-nav a {
+  padding: 10px 15px;
+  font-size: 2em !important;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+.main-nav a {
+  color: #dadada;
+  font-size: 0.99em;
+}
+.main-nav a:hover {
+  color: #F58239;
+}
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #343434;
+}
+.header img {
+  max-width: 200px;
+}
+#main_background {
+  margin: 0;
+  height: 100vh;
+  padding-top: 10%;
+}
+#main_background h1 {
+  text-align: right;
+  color: white;
+  margin-right: 5%;
+}
+#big1 {
+  width: 35%;
+  float: right;
+  margin-right: 20%;
+}
+#big2 {
+  width: 100%;
+}
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 5px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+.floating2 {
+  animation-name: floating2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating2 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 5px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+.accordion {
+  background-color: none;
+  color: black;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: white;
+}
+.accordion-header, .accordion-collapse, .accordion-item, .accordion-button, .accordion {
+  border-radius: 20px !important;
+}
+.accordion-button:focus {
+  background-color: none;
+}
+/* tint-color($component-active-bg, 90%);
+$accordion-button-active-color:           shade-color($primary, 10%); */
+.accordion-item {
+  margin: 10px 0px;
+  background-color: white;
+}
+.accordion-item:active {
+  color: black;
+  background-color: white;
+}
+.imgRw {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.imgColumnRw {
+  flex: 25%;
+  /* margin: 50px 0px; */
+  max-width: 25%;
+  padding: 4px 34px;
+}
+.imgColumnRw img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+/* Responsive layout - makes a two imgColumnRw-layout instead of four imgColumnRws */
+@media screen and (max-width: 800px) {
+  .imgColumnRw {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-4, .col-5 {
+    min-width: 80%;
+    /* float:left; */
+    text-align: center;
+  }
+  .imgRw {
+    margin: 0;
+    padding: 0;
+  }
+  .imgColumnRw {
+    min-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .col-4 img, .col-5 img, .buttoning {
+    /* max-width:80%; */
+    /* margin:0 auto; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+/* ================================= 
+    Media Queries
+  ==================================== */
+@media (min-width: 769px) {
+  .header, .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
